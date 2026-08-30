@@ -109,9 +109,6 @@ em { font-style: italic; color: var(--color-primary); }
 }
 .btn-primary:hover::after { left: 130%; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.btn-book-now {
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-}
 .btn-outline {
   background: transparent;
   border: 1.5px solid var(--color-border);
