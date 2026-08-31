@@ -227,8 +227,6 @@ em { font-style: italic; color: var(--color-primary); }
 .nav-link.active { color: var(--color-primary); }
 
 .header-actions { display: flex; align-items: center; gap: 14px; }
-.header-phone { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 500; color: var(--color-muted); }
-.header-phone:hover { color: var(--color-primary); }
 
 /* ---------- Language switch + theme toggle ---------- */
 .lang-switch {
@@ -279,7 +277,6 @@ em { font-style: italic; color: var(--color-primary); }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 992px) {
-  .header-phone { display: none; }
   .main-nav {
     position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
     background: var(--color-bg);
@@ -319,13 +316,11 @@ em { font-style: italic; color: var(--color-primary); }
 
 .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; padding-top: 40px; padding-bottom: 88px; }
 
-.hero-title-wrap { position: relative; display: inline-block; max-width: 100%; }
 .hero-copy h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); margin: 0; }
 .hero-tag {
-  position: absolute;
-  top: -22px; right: -6px;
-  transform: rotate(5deg);
-  display: inline-flex; align-items: center;
+  display: inline-flex;
+  align-items: center;
+  transform: rotate(-2deg);
   background: var(--color-surface);
   color: var(--color-primary);
   font-size: 0.66rem;
@@ -333,12 +328,12 @@ em { font-style: italic; color: var(--color-primary); }
   letter-spacing: .07em;
   text-transform: uppercase;
   line-height: 1.4;
-  padding: 10px 16px;
+  padding: 9px 16px;
   border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 4px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
   white-space: nowrap;
-  z-index: 2;
+  margin-bottom: 18px;
 }
 
 .hero-copy-row { display: flex; gap: 32px; align-items: flex-end; flex-wrap: wrap; margin: 30px 0 0; }
@@ -394,8 +389,6 @@ em { font-style: italic; color: var(--color-primary); }
 
 @media (max-width: 992px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
-  .hero-title-wrap { display: block; }
-  .hero-tag { position: static; display: inline-flex; transform: rotate(-2deg); margin-bottom: 16px; }
   .hero-copy-row { justify-content: center; }
   .hero-lede { margin-left: auto; margin-right: auto; }
   .hero-cta { justify-content: center; }
