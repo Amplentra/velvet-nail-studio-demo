@@ -183,6 +183,24 @@ em { font-style: italic; color: var(--color-primary); }
 .logo-text { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; letter-spacing: .01em; }
 .logo-text em { display: block; font-style: normal; font-family: var(--font-body); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-muted); }
 
+/* ---------- Standalone top logo (site header carries only nav + controls) ---------- */
+.site-logo {
+  position: fixed; top: 26px; left: 26px; z-index: 1000;
+  display: flex; align-items: center; gap: 14px;
+}
+.site-logo .logo-mark {
+  width: 60px; height: 60px;
+  box-shadow: var(--shadow-md);
+}
+.site-logo .logo-text { font-size: 1.7rem; }
+.site-logo .logo-text em { font-size: 0.66rem; }
+@media (max-width: 768px) {
+  .site-logo { top: 18px; left: 18px; gap: 10px; }
+  .site-logo .logo-mark { width: 46px; height: 46px; }
+  .site-logo .logo-text { font-size: 1.3rem; }
+  .site-logo .logo-text em { font-size: 0.58rem; }
+}
+
 .main-nav ul { display: flex; gap: 34px; }
 .nav-link { position: relative; font-size: 0.94rem; font-weight: 500; padding: 6px 0; }
 .nav-link::after {
@@ -263,6 +281,7 @@ em { font-style: italic; color: var(--color-primary); }
   position: relative;
   min-height: 100vh;
   display: flex; align-items: center;
+  padding-top: 118px;
   padding-bottom: var(--header-h);
   overflow: hidden;
   background: linear-gradient(120deg, var(--color-bg), var(--color-bg-alt), var(--hero-tint-1), var(--hero-tint-2), var(--color-bg-alt), var(--color-bg));
