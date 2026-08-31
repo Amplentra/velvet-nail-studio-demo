@@ -10,31 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     el.appendChild(inner);
   });
 
-  /* ---------- Preloader (curtain reveal + percent count) ---------- */
-  const preloader = document.getElementById('preloader');
-  const preloaderPercent = document.getElementById('preloaderPercent');
-  let preloaderDone = false;
-
-  function finishPreloader() {
-    if (preloaderDone) return;
-    preloaderDone = true;
-    preloader && preloader.classList.add('hidden');
-    document.body.classList.add('loaded');
-    document.querySelectorAll('.hero-copy, .hero-visual').forEach(el => el.classList.add('in-view'));
-  }
-
-  let pct = 0;
-  const pctTimer = setInterval(() => {
-    pct = Math.min(100, pct + Math.floor(Math.random() * 14) + 6);
-    if (preloaderPercent) preloaderPercent.textContent = pct + '%';
-    if (pct >= 100) {
-      clearInterval(pctTimer);
-      setTimeout(finishPreloader, 250);
-    }
-  }, 110);
-
-  // hard safety fallback in case the counter or fonts/images stall
-  setTimeout(finishPreloader, 3500);
+  /* ---------- Hero entrance ---------- */
+  document.body.classList.add('loaded');
+  document.querySelectorAll('.hero-copy, .hero-visual').forEach(el => el.classList.add('in-view'));
 
   /* ---------- Magnetic buttons (hero + header CTAs) ---------- */
   if (window.matchMedia('(min-width: 993px)').matches) {
@@ -105,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0, rootMargin: '0px 0px 160px 0px' });
   revealEls.forEach(el => {
-    if (el.closest('.hero')) return; // hero timing is driven by the preloader instead
+    if (el.closest('.hero')) return; // hero reveals immediately on load instead
     revealObserver.observe(el);
   });
 
