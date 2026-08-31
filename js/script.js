@@ -218,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const formNote = document.getElementById('formNote');
   bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    formNote.textContent = '✓ Thank you! Your request has been received - we will confirm shortly.';
+    const t = window.VNS_I18N && window.VNS_I18N.t;
+    formNote.textContent = (t && t('form.success')) || '✓ Thank you! Your request has been received - we will confirm shortly.';
     bookingForm.reset();
     setTimeout(() => { formNote.textContent = ''; }, 6000);
   });
@@ -226,8 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newsletterForm = document.getElementById('newsletterForm');
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const t = window.VNS_I18N && window.VNS_I18N.t;
     const input = newsletterForm.querySelector('input');
-    input.value = 'Subscribed! ✓';
+    input.value = (t && t('footer.subscribed')) || 'Subscribed! ✓';
     setTimeout(() => { input.value = ''; }, 2500);
   });
 
