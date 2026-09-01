@@ -19,11 +19,12 @@
   --chip-bg: rgba(183, 110, 121, 0.10);
   --chip-border: rgba(183, 110, 121, 0.22);
   --header-scrolled-bg: rgba(255, 250, 247, 0.88);
-  --hero-tint-1: #f5ddd2;
-  --hero-tint-2: #f0e2d8;
-  --blob-1: #f2c9c2;
-  --blob-2: #e9d9b8;
-  --blob-3: #e6bfc7;
+  --hero-tint-1: #f0c7bf;
+  --hero-tint-2: #e8aec2;
+  --hero-tint-3: #d0a8da;
+  --blob-1: #e79aa8;
+  --blob-2: #eccb9a;
+  --blob-3: #cf9bd8;
   --blob-opacity: .55;
 
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -57,11 +58,12 @@
   --chip-bg: rgba(224, 139, 152, 0.14);
   --chip-border: rgba(224, 139, 152, 0.3);
   --header-scrolled-bg: rgba(23, 17, 15, 0.86);
-  --hero-tint-1: #2c1f1c;
-  --hero-tint-2: #241a17;
-  --blob-1: #5a2f3a;
-  --blob-2: #4a3a1f;
-  --blob-3: #4a2530;
+  --hero-tint-1: #3a2028;
+  --hero-tint-2: #452433;
+  --hero-tint-3: #33203f;
+  --blob-1: #6e2f42;
+  --blob-2: #5a3a24;
+  --blob-3: #4a2a5c;
   --blob-opacity: .5;
   --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.28);
   --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.34);
@@ -274,7 +276,7 @@ em { font-style: italic; color: var(--color-primary); }
   display: flex; align-items: center;
   padding-bottom: var(--header-h);
   overflow: hidden;
-  background: linear-gradient(120deg, var(--color-bg), var(--color-bg-alt), var(--hero-tint-1), var(--hero-tint-2), var(--color-bg-alt), var(--color-bg));
+  background: linear-gradient(125deg, var(--hero-tint-1), var(--hero-tint-2), var(--hero-tint-3), var(--hero-tint-2), var(--hero-tint-1));
   background-size: 320% 320%;
   animation: heroShimmer 22s ease-in-out infinite;
 }
@@ -318,18 +320,25 @@ em { font-style: italic; color: var(--color-primary); }
 
 .hero-visual { position: relative; height: 460px; margin-bottom: 26px; }
 .hero-card { position: absolute; border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: var(--shadow-lg); }
-.hero-card-main { width: 100%; height: 100%; overflow: hidden; padding: 14px; }
+.hero-card-main {
+  width: 100%; height: 100%; overflow: hidden; padding: 14px;
+  border-radius: 36px;
+  box-shadow: 0 30px 70px -12px color-mix(in srgb, var(--color-primary) 42%, transparent), var(--shadow-lg);
+}
 .hero-swatch {
-  width: 100%; height: 100%; border-radius: calc(var(--radius-lg) - 8px);
-  background: linear-gradient(150deg, rgba(246,217,210,.35), rgba(168,98,111,.45)), url('../assets/img/hero.jpg') center/cover no-repeat;
+  width: 100%; height: 100%; border-radius: 26px;
+  background:
+    linear-gradient(128deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,0) 26%, rgba(255,255,255,0) 74%, rgba(255,255,255,.16) 100%),
+    linear-gradient(150deg, rgba(246,217,210,.35), rgba(168,98,111,.45)),
+    url('../assets/img/hero.jpg') center/cover no-repeat;
   position: relative;
   overflow: hidden;
 }
 .hero-swatch::before, .hero-swatch::after {
   content: ''; position: absolute; border-radius: 50%;
 }
-.hero-swatch::before { width: 180px; height: 180px; background: rgba(255,255,255,0.25); top: -50px; right: -40px; }
-.hero-swatch::after { width: 120px; height: 120px; background: rgba(255,255,255,0.18); bottom: 30px; left: -30px; }
+.hero-swatch::before { width: 180px; height: 180px; background: rgba(255,255,255,0.3); top: -50px; right: -40px; filter: blur(2px); }
+.hero-swatch::after { width: 120px; height: 120px; background: rgba(255,255,255,0.2); bottom: 30px; left: -30px; filter: blur(2px); }
 .hero-card-badge {
   position: absolute; left: 26px; bottom: 26px;
   display: flex; align-items: center; gap: 8px;
