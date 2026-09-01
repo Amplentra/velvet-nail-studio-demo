@@ -95,7 +95,12 @@ window.I18N = {
       quickLinks: "Quick Links", servicesTitle: "Services",
       newsletterTitle: "Stay in the Loop", newsletterText: "Get seasonal design drops and studio offers.",
       newsletterPlaceholder: "Your email address", subscribed: "Subscribed! ✓",
-      rights: "All rights reserved.",
+      privacyCookies: "Privacy & cookies", designBuild: "Design & build – Amplentra",
+    },
+    cookies: {
+      title: "We use cookies.",
+      body: "Just one, to remember your language. No tracking, no ads.",
+      accept: "Got it",
     },
     aria: {
       toggleMenu: "Toggle menu", scrollDown: "Scroll down",
@@ -199,7 +204,12 @@ window.I18N = {
       quickLinks: "Быстрые ссылки", servicesTitle: "Услуги",
       newsletterTitle: "Будьте в курсе", newsletterText: "Сезонные идеи дизайна и акции студии.",
       newsletterPlaceholder: "Ваш email", subscribed: "Вы подписаны! ✓",
-      rights: "Все права защищены.",
+      privacyCookies: "Конфиденциальность и cookies", designBuild: "Дизайн и разработка – Amplentra",
+    },
+    cookies: {
+      title: "Мы используем cookies.",
+      body: "Всего один — чтобы запомнить язык. Без отслеживания, без рекламы.",
+      accept: "Понятно",
     },
     aria: {
       toggleMenu: "Открыть меню", scrollDown: "Прокрутить вниз",
@@ -303,7 +313,12 @@ window.I18N = {
       quickLinks: "Ātrās saites", servicesTitle: "Pakalpojumi",
       newsletterTitle: "Paliec lietas kursā", newsletterText: "Sezonas dizaina jaunumi un studijas piedāvājumi.",
       newsletterPlaceholder: "Tavs e-pasts", subscribed: "Pieteikts! ✓",
-      rights: "Visas tiesības aizsargātas.",
+      privacyCookies: "Privātums un sīkdatnes", designBuild: "Izstrāde un dizains – Amplentra",
+    },
+    cookies: {
+      title: "Mēs izmantojam sīkdatnes.",
+      body: "Tikai vienu — lai atcerētos tavu valodu. Bez izsekošanas, bez reklāmām.",
+      accept: "Sapratu",
     },
     aria: {
       toggleMenu: "Pārslēgt izvēlni", scrollDown: "Ritināt uz leju",

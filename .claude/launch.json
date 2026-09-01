@@ -4,8 +4,8 @@
     {
       "name": "velvet-static",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "4173", "."],
-      "port": 4173
+      "runtimeArgs": ["serve", "-l", "4179", "."],
+      "port": 4179
     }
   ]
 }

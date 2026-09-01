@@ -218,6 +218,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  /* ---------- Cookie notice ---------- */
+  const COOKIE_KEY = 'vns-cookie-ack';
+  const cookieNotice = document.getElementById('cookieNotice');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieLinkBtn = document.getElementById('cookieLinkBtn');
+
+  let cookieAcked = false;
+  try { cookieAcked = !!localStorage.getItem(COOKIE_KEY); } catch (e) {}
+  if (!cookieAcked) cookieNotice.classList.add('visible');
+
+  cookieAccept.addEventListener('click', () => {
+    cookieNotice.classList.remove('visible');
+    try { localStorage.setItem(COOKIE_KEY, '1'); } catch (e) {}
+  });
+  cookieLinkBtn.addEventListener('click', () => cookieNotice.classList.add('visible'));
+
   onScroll();
   setActiveLink();
 });
